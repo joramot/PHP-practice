@@ -58,4 +58,30 @@
         }
         return $apellido;
     }
+
+    #arrays
+
+    $preciosos = ["Pedro Emiliano", "Raul Antonio"];
+    $sobrinos = array("Hans", "Ivanna", "Helena", "Marita", "Susana");
+
+    echo $preciosos[0] . "<br>";
 ?>
+     
+    <h1>Preciosos</h1>
+    <ul>
+        <?php
+        #ciclos
+            foreach($preciosos as $precioso){
+            echo "$precioso</li><br>";  
+        }
+        ?>
+    </ul>
+
+    <h1>Sobrinos</h1>
+    <ul>
+        <?php
+            foreach($sobrinos as $sobrino){
+            echo "$sobrino</li><br>";  
+        }
+        ?>
+    </ul>
