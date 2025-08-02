@@ -28,7 +28,8 @@
 
     # Como recibir valores desde la URL usando $_GET
 
-    echo $_GET['nombre'] . "<br>";
+    echo $nombre = nameValidation(). "<br>";
+    echo $apellido = apellidoValidation("apellido"). "<br>";
     valoresIniciales();
 
     #funciones
@@ -38,5 +39,23 @@
 
         echo "<h1>La suma de $var_1 + $var_2 es igual a".($var_1 + $var_2)."</h1>";
         echo "<h1>La resta de $var_1 - $var_2 es igual a".($var_1 - $var_2)."</h1>";
+    }
+
+    function nameValidation() {
+        if(isset($_GET["nombre"])){
+            $nombre = $_GET["nombre"];            
+        }else {
+            $nombre = "Pedro Emiliano";
+        }
+        return $nombre;
+    }
+
+    function apellidoValidation($apellido) {
+        if(isset($_GET["apellido"])){
+            $apellido = $_GET["apellido"];            
+        }else {
+            $apellido = "Gonzalez";
+        }
+        return $apellido;
     }
 ?>
