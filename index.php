@@ -8,9 +8,24 @@
 
 
     # usos de variables y opreadores
-    $var_1 = 10;
-    $var_2 = 20;
 
-    echo "<h1>La suma de $var_1 + $var_2 es igual a " . ($var_1 + $var_2) . "</h1>";
-    echo "<h1>La resta de $var_1 - $var_2 es igual a " . ($var_1 - $var_2) . "</h1>";
+    /* 
+    
+    este bloque de codigo muestra warning porque las variables no estan definidas
+    $var_1 = 0;
+    $var_2 = 0;
+    
+    $var_1 = $_GET['valo1'];
+    $var_2 = $_GET['valo2'];
+    */
+
+    $var_1 = isset($_GET['valor1']) ? $_GET['valor1'] : 0;
+    $var_2 = isset($_GET['valor2']) ? $_GET['valor2'] : 0;
+
+    echo "<h1>La suma de $var_1 + $var_2 es igual a".($var_1 + $var_2)."</h1>";
+    echo "<h1>La resta de $var_1 - $var_2 es igual a".($var_1 - $var_2)."</h1>";
+
+    # Como recibir valores desde la URL usando $_GET
+
+    echo $_GET['nombre'] . "<br>";
 ?>
