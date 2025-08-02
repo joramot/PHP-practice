@@ -19,13 +19,24 @@
     $var_2 = $_GET['valo2'];
     */
 
-    $var_1 = isset($_GET['valor1']) ? $_GET['valor1'] : 0;
+    /* $var_1 = isset($_GET['valor1']) ? $_GET['valor1'] : 0;
     $var_2 = isset($_GET['valor2']) ? $_GET['valor2'] : 0;
 
     echo "<h1>La suma de $var_1 + $var_2 es igual a".($var_1 + $var_2)."</h1>";
     echo "<h1>La resta de $var_1 - $var_2 es igual a".($var_1 - $var_2)."</h1>";
+    */
 
     # Como recibir valores desde la URL usando $_GET
 
     echo $_GET['nombre'] . "<br>";
+    valoresIniciales();
+
+    #funciones
+    function valoresIniciales() {
+        $var_1 = isset($_GET['valor1']) ? $_GET['valor1'] : 0;
+        $var_2 = isset($_GET['valor2']) ? $_GET['valor2'] : 0;
+
+        echo "<h1>La suma de $var_1 + $var_2 es igual a".($var_1 + $var_2)."</h1>";
+        echo "<h1>La resta de $var_1 - $var_2 es igual a".($var_1 - $var_2)."</h1>";
+    }
 ?>
